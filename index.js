@@ -4,7 +4,7 @@ const FileSystem = require('fs');
 // const generateMarkdown = require('./utils/generateMarkdown');
 // const utiis = require('generateMarkdown');
 
-
+// TODO: Create an array of questions for user input
 inquirer
   .prompt([
     {
@@ -13,23 +13,29 @@ inquirer
       name: 'name',
     },
     {
-        type: 'password',
-        message: 'What is your password?',
-        name: 'password',
+        type: 'checkbox',
+        message: 'Your Selected Sections for a README',
+        name: 'sections',
+        choices: ['Description', 'Table of Contents', 'Installation', 'Usage', 'License', 'Contributing', 'Tests', 'Questions'],
+      },
+      {
+        type: 'list',
+        message: 'Your License',
+        name: 'licenses',
+        choices: ['ISC', 'MIT', 'GNU', 'GPLv3'],
       },
     {
-      type: 'checkbox',
-      message: 'What languages do you know?',
-      name: 'stack',
-      choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
-    },
+        type: 'username',
+        message: 'GitHub username?',
+        name: 'username',
+      },
     {
-      type: 'list',
-      message: 'What is your preferred method of communication?',
-      name: 'contact',
-      choices: ['email', 'phone', 'telekinesis'],
+        type: 'email',
+        message: 'Email Address?',
+        name: 'email',
     },
-  ])
+    ])
+
   .then((data) => {
     const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
 
@@ -38,13 +44,6 @@ inquirer
     );
   });
 
-// // TODO: Create an array of questions for user input
-// const questions = [
-//     {
-//         type:
-//         question:
-//     }
-// ];
 
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
