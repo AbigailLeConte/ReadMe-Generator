@@ -1,8 +1,11 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  return `# ${license.title} ## license ${renderLicenseBadge(license)}`
-}
+  const licenseName = data.license[0];
+  let string = ""
+  if(licenseName === "MIT"){
+    string = `[!(https://img.shields.io./badge/license-MIT-yellow.svg)]`
+};
 console.log(license);
 const str = '';
 

@@ -45,11 +45,16 @@ inquirer
   });
 
 
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+// TODO: Create a function to write README file
+// function writeToFile(filename, data, (err) {
+//     if(err) {
+//         return console.log(err);
+//     }
+//     console.log("The file was saved!");
+// }); 
 
-// // TODO: Create a function to initialize app
+// // TODO: Create a 
 // function init() {}
 
 // // Function call to initialize app
-// init();
+// init = require('init-package-json');
