@@ -1,8 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const FileSystem = require('fs');
-// const generateMarkdown = require('./utils/generateMarkdown');
-// const utiis = require('generateMarkdown');
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
+const utiis = require('generateMarkdown');
+const content = JSON.stringify(output);
+
 
 // TODO: Create an array of questions for user input
 inquirer
@@ -46,15 +48,22 @@ inquirer
 
 
 // TODO: Create a function to write README file
-// function writeToFile(filename, data, (err) {
-//     if(err) {
-//         return console.log(err);
-//     }
-//     console.log("The file was saved!");
-// }); 
+function writeToFile(./utils/.DS_Store/, data, (err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log("The file was saved!");
+});
 
-// // TODO: Create a 
-// function init() {}
+// TODO: Create a 
+function init() {
+  promptUser()
+    // Use writeFile method imported from fs.promises to use promises instead of
+    // a callback function
+    .then((answers) => writeFile('index.html', generateHTML(answers)))
+    .then(() => console.log('Successfully wrote to index.html'))
+    .catch((err) => console.error(err));
+}
 
-// // Function call to initialize app
-// init = require('init-package-json');
+// Function call to initialize app
+init = require('init-package-json');
